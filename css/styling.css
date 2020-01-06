@@ -1,0 +1,55 @@
+h1,h2,h3,h4,h5,h6 {
+  color:#696969;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+label {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+p {
+  color:#696969;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align:justify;
+}
+
+.clink {
+  color:#B80F0A;
+  text-decoration:underline;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.clink:hover, .clink:active {
+  color:#696969;
+}
+
+.clinktab {
+  color:#B80F0A;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.clintab:hover {
+  color:#696969;
+}
+
+
+.btn-styled {
+  color:#B80F0A;
+  background-color:#FFFFFF;
+  border-color:#B80F0A;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.btn-styled:hover {
+  color:#FFFFFF;
+  background-color:#B80F0A;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #F8F8F8;
+    color: #F8F8F8;
+}
+
+.clickable {
+    cursor: pointer;   
+}

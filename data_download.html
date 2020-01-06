@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  HSM - PPI Modeling Framework
+</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+      crossorigin="anonymous"></link>
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+      crossorigin="anonymous"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<link rel="stylesheet" href="css/styling.css"></script>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapsible">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/branding/symbol_name.png" style='vertical-align:text-top;max-height:20px;'>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarCollapsible">
+        <ul class="nav navbar-nav">
+          <li><a href="protein_viewer.html">Domain / Structure View</a></li>
+          <li><a href="network_visualization.html">Network View</a></li>
+          <li><a href="complete_networks.html">Network View - Pre-computed</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#"><span class="glyphicon glyphicon-download-alt"></span> Data Download</a></li>
+          <li><a href="https://www.nature.com/nmeth/"><span class="glyphicon glyphicon-list"></span> Background</a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-6">
+          <h1 style="margin-top:.5em">Data Download</h1> 
+        </div>
+        <div class="col-sm-3 col-3"></div>
+        <div class="col-sm-3 col-3">
+          <a>
+            <img src="assets/branding/symbol_name.large.png" style='vertical-align:text-top;max-height:75px'></img>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9 col-9">
+          <h4>Download protein-protein interactions for targeted PBD-containing proteins.</h4>
+        </div>
+        <div class="col-sm-3 col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9 col-9">
+          <h2 style="color:#B80F0A;">Data access currently disabled.</h2>
+        </div>
+        <div class="col-sm-3 col-3"></div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-4">
+          <h2>All Proteins</h2>
+        </div>
+        <div class="col-sm-8 col-md-8">
+           <span style="width:100%">
+						<select multiple class="selectpicker" id="inputQueryProteins" data-live-search="true" title="No Proteins Selected">
+            </select>
+          </span>       
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-4 col-md-4">
+          <h2>Proteins per PBD</h2>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <span style="width:100%">
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true" id="inputSH2Query" title="SH2" style="width:100%">
+            </select>
+          </span>
+          <span >
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true"  id="inputTKQuery" title="TK">
+            </select>
+          </span>
+          <span>
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true"  id="inputPTPQuery" title="PTP">
+            </select>
+          </span>
+          <span>
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true" id="inputSH3Query" title="SH3" style="width:100%">
+            </select>
+          </span>
+          <span >
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true" id="inputWWQuery" title="WW">
+            </select>
+          </span>
+          <span>
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true" id="inputPDZQuery" title="PDZ">
+            </select>
+          </span>
+          <span>
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true" id="inputWH1Query" title="WH1" style="width:100%">
+            </select>
+          </span>
+          <span >
+            <select multiple class="selectpicker show-tick" data-actions-box="true" data-live-search="true" id="inputPTBQuery" title="PTB">
+            </select>
+          </span>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-4 col-md-4">
+          <h2>Parameters</h2>
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <div class="form-group">
+            <label for="hsmpThresholdInput">HSM/P Threshold</label>
+            <input type="text" class="form-control" id="hsmpThresholdInput" aria-describedby="hsmpThresholdHelp" placeholder="0.5">
+            <small id="hsmpThresholdHelp" class="form-text text-muted">Range: 0.5 - 1.0. Default: 0.5.</small>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <div class="form-group">
+            <label for="neighborhoodThresholdInput">Maximum Neighborhood Size</label>
+            <input type="text" class="form-control" id="neighborhoodThresholdInput" aria-describedby="neighborhoodThresholdHelp" placeholder="100">
+            <small id="neighborhoodThresholdHelp" class="form-text text-muted">Maxmimum allowable neighborhood. Default: None.</small>
+          </div>
+        </div>
+      </div>
+			<br>
+			<br>
+      <div class="row">
+        <center>
+          <button type="button" class="btn btn-styled">Submit Query</button>
+        </center>
+      </div>
+    </div>
+    <hr/>
+	  <br>
+    <div class="container" style="text-align:center">
+      <p style="color:#696969">For larger data access or to access PBD-peptide interaction predictions, refer to the uploaded data at <a href="https://www.synapse.org/" style="color:#B80F0A">synapse.org</a></p>
+      <br>
+    </div>
+  </div> 
+ 	<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="fixed-bottom" style="background-color:#F8F8F8">
+	  <br>
+    <div class="container" style='margin-top:1.5em'>
+      <div class="row">
+        <div class="col-3 col-sm-3">
+          <img style="max-height:60px;margin-top:10px" src="assets/branding/lsp_logo.png"></img>
+          <br>
+          <br>
+          <img style="max-height:50px;margin-top:10px" src="assets/branding/hms_logo.png"></img>
+        </div>
+        <div class="col-5 col-sm-5"></div>
+        <div class="col-4 col-sm-4" align='right'>
+          <a class="btn btn-styled" href="protein_structure.html" role="button" style='width:200px;margin:2px'>Structure View</a>
+          <br>
+          <a class="btn btn-styled" href="network_visualization.html" role="button" style='width:200px;margin:2px'>Network View</a>
+          <br>
+          <a class="btn btn-styled" href="#" role="button" style='width:200px;margin:2px'>Data Download</a>
+          <br>
+          <a class="btn btn-styled" href="https://www.nature.com/nmeth/" role="button" style='width:200px;margin:2px'>Background</a>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class='col-6 col-sm-6'>
+          <p style="margin-bottom:.2em;text-align:left">Funding: <b>U54-CA225088 (NIH), P50-GM107618 (NIH)</b> and <b>W911NF-14-1-0397 (DARPA / DOD)</b></p>
+        </div>
+        <div class='col-6 col-sm-6'>
+          <p style="margin-bottom:0em;text-align:right;">&copy; 2018, Laboratory of Systems Pharmacology. All rights reserved.</p> 
+        </div>
+      </div>
+      <br>
+  </div>
+</div>
+</body>
+<script src="js/data_download.js"></script>
+<script>
+	initializePBDInput();
+</script>
+
+</html>

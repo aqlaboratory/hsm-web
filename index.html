@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  HSM - PPI Modeling Framework
+</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+      crossorigin="anonymous"></link>
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+      crossorigin="anonymous"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<link rel="stylesheet" href="css/styling.css"></script>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapsible">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/branding/symbol_name.png" style='vertical-align:text-top;max-height:20px;'>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarCollapsible">
+        <ul class="nav navbar-nav">
+          <li><a href="protein_viewer.html">Domain / Structure View</a></li>
+          <li><a href="network_visualization.html">Network View</a></li>
+          <li><a href="complete_networks.html">Network View - Pre-computed</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="data_download.html"><span class="glyphicon glyphicon-download-alt"></span> Data Download</a></li>
+          <li><a href="https://www.nature.com/nmeth/"><span class="glyphicon glyphicon-list"></span> Background</a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-8">
+		      <h1 style="margin-top:.5em"><span style="color:#B80F0A">H</span>ierarchical <span style="color:#B80F0A">S</span>tatistical <span style="color:#B80F0A">M</span>echanical model</h1> 
+        </div>
+        <div class="col-sm-1 col-1"></div>
+        <div class="col-sm-3 col-3">
+          <a>
+            <img src="assets/branding/symbol_name.large.png" style='vertical-align:text-top;max-height:75px'></img>
+          </a>
+        </div>
+        <div class="col-sm-8 col-8">
+		      <h4 style="margin-top:.5em">Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.</h4> 
+        </div>
+        <div class="col-sm-4 col-4"></div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-6">
+          <h1>Model</h1> 
+        </div>
+        <div class="col-sm-6 col-6">
+          <p style='align:justify;margin-top:1.8em'>
+          This website presents the predictions and models described in: 
+          </p>
+          <p style='align:justify;margin-top:1em;font-size:medium'>
+          Cunningham, Koytiger, Sorger, AlQuraishi. "Biophysical prediction of protein-peptide interactions and signaling networks using machine learning." <i>Nature Methods</i> (2020). <a href="https://www.nature.com/nmeth/" class="clink">doi:</a> 
+          </p> 
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="row">
+        <div class="col-sm-7 col-7">
+          <h1>Explore</h1> 
+        </div>
+        <div class="col-sm-5 col-5" align='center'>
+          <div style="margin-top:1.8em">
+            <a class="btn btn-styled" href="protein_viewer.html" role="button" style='width:120px'>Structural View</a>
+            <a class="btn btn-styled" href="network_visualization.html" role="button" style='width:120px'>Network View</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6 col-6">
+          <h1>Data / Code</h1> 
+        </div>
+        <div class="col-sm-6 col-6">
+          <p style='align:justify;margin-top:1.8em'>
+          Data and code are available in a number of ways. Code is available via Github for the <a href="https://github.com/aqlaboratory/hsm" class="clink">model</a>. A separate <a href="https://github.com/aqlaboratory/hsm-web" class="clink">repository</a> stores the code associated with the figures from the paper. Complete data are available via  <a href="#" class="clink">figshare</a>. Targeted downloads (i.e. queries for one / a few proteins and their neighborhood) are available via this website. For systematic access, we request that you use  <a href="#" class="clink">figshare</a>.
+          </p>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="row">
+        <div class="col-sm-6 col-6">
+          <h1>Development</h1> 
+        </div>
+        <div class="col-sm-6 col-6">
+          <p style='align:justify;margin-top:1.8em'>
+          The model, analysis, and website were developed / implemented in the <a class='clink'>AlQuraishi</a> and <a class='clink'>Sorger</a> Laboratories within the <a class='clink'>Laboratory of Systems Pharmacology</a> at Harvard Medical School. Questions, comments, concerns should be submitted via the GitHub repositories: <a href="https://github.com/aqlaboratory/hsm-web" class='clink'>github.com/aqlaboratory/hsm-web</a> 
+          </p>
+	      </div>
+      </div>
+    </div>
+  </div> 
+ 	<br>
+ 	<br>
+ 	<br>
+  <div class="fixed-bottom" style="background-color:#F8F8F8">
+	  <br>
+    <div class="container" style='margin-top:1.5em'>
+      <div class="row">
+        <div class="col-3 col-sm-3">
+          <img style="max-height:60px;margin-top:10px" src="assets/branding/lsp_logo.png"></img>
+          <br>
+          <br>
+          <img style="max-height:50px;margin-top:10px" src="assets/branding/hms_logo.png"></img>
+        </div>
+        <div class="col-5 col-sm-5"></div>
+        <div class="col-4 col-sm-4" align='right'>
+          <a class="btn btn-styled" href="protein_structure.html" role="button" style='width:200px;margin:2px'>Structure View</a>
+          <br>
+          <a class="btn btn-styled" href="network_visualization.html" role="button" style='width:200px;margin:2px'>Network View</a>
+          <br>
+          <a class="btn btn-styled" href="data_download.html" role="button" style='width:200px;margin:2px'>Data Download</a>
+          <br>
+          <a class="btn btn-styled" href="https://www.nature.com/nmeth/" role="button" style='width:200px;margin:2px'>Background</a>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class='col-6 col-sm-6'>
+          <p style="margin-bottom:.2em;text-align:left">Funding: <b>U54-CA225088 (NIH), P50-GM107618 (NIH)</b> and <b>W911NF-14-1-0397 (DARPA / DOD)</b></p>
+        </div>
+        <div class='col-6 col-sm-6'>
+          <p style="margin-bottom:0em;text-align:right;">&copy; 2018, Laboratory of Systems Pharmacology. All rights reserved.</p> 
+        </div>
+      </div>
+      <br>
+  </div>
+</div>
+</body>
+</html>
