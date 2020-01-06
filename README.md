@@ -1,8 +1,10 @@
-![HSM Banner Image](assets/branding/symbol_name.large.png)
-
 # hsm-web - Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.  
-  
-This repository contains the code associated with the website for [Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.](). The website is located at [proteinpeptide.io](proteinpeptide.io). The website depends on downloading pre-processed data from [figshare]() and placing the directories into `assets`
+
+
+<img align="left" src="assets/branding/symbol_name.png" style="width: 25%; height: 25%"/> 
+
+This repository contains the code associated with the website for [Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.](). The website is located at [proteinpeptide.io](proteinpeptide.io). The website depends on downloading pre-processed data from [figshare]() and placing the directories into `assets`.
+
 
 ## Reference
 Please reference the associated publication:
