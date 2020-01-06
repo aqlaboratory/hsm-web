@@ -3,18 +3,16 @@
 
 <img align="left" src="assets/branding/symbol_name.png" style="width: 25%; height: 25%"/> 
 
-This repository contains the code associated with the website for [Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.](). The website is located at [proteinpeptide.io](proteinpeptide.io). The website depends on downloading pre-processed data from [figshare]() and placing the directories into `assets`.
+This repository contains the code associated with the website for [Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.](https://doi.org/10.1038/s41592-019-0687-1). The website is located at [proteinpeptide.io](https://proteinpeptide.io). The website depends on downloading pre-processed data from [figshare]() and placing the directories into `assets`.
 
 
 ## Reference
 Please reference the associated publication:
 
-Cunningham, J.M., Koytiger, G., Sorger, P.K., & AlQuraishi, M. "Biophysical prediction of protein-peptide interactions and signaling networks using machine learning." *Nature Methods* (2020). [doi:](https://doi.org/). ([citation.bib](https://raw.githubusercontent.com/aqlaboratory/hsm/misc/citation.bib))
+Cunningham, J.M., Koytiger, G., Sorger, P.K., & AlQuraishi, M. "Biophysical prediction of protein-peptide interactions and signaling networks using machine learning." *Nature Methods* (2020). [doi:10.1038/s41592-019-0687-1](https://doi.org/10.1038/s41592-019-0687-1).
 
 ### See also
-- Predictions: [doi:](figshare.com/)
-- Website: [proteinpeptide.io](proteinpeptide.io) 
-- Website code: [aqlaboratory/hsm-web](https://github.com/aqlaboratory/hsm-web) 
+- Paper code:[aqlaboratory/hsm](https://github.com/aqlaboratory/hsm)
 
 ## Funding
 
