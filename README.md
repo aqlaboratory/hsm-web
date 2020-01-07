@@ -3,7 +3,7 @@
 
 <img align="left" src="assets/branding/symbol_name.png" style="width: 25%; height: 25%"/> 
 
-This repository contains the code associated with the website for [Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.](https://doi.org/10.1038/s41592-019-0687-1). The website is located at [proteinpeptide.io](https://proteinpeptide.io). The website depends on downloading pre-processed data from [figshare]() and placing the directories into `assets`.
+This repository contains the code associated with the website for [Biophysical prediction of protein-peptide interactions and signaling networks using machine learning.](https://doi.org/10.1038/s41592-019-0687-1). The website is located at [proteinpeptide.io](http://proteinpeptide.io). The website depends on downloading pre-processed data from [figshare]() and placing the directories into `assets`.
 
 
 ## Reference
