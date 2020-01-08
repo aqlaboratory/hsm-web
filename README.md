@@ -14,6 +14,11 @@ Cunningham, J.M., Koytiger, G., Sorger, P.K., & AlQuraishi, M. "Biophysical pred
 ### See also
 - Paper code:[aqlaboratory/hsm](https://github.com/aqlaboratory/hsm)
 
+## Credits
+- Protein Viewer: [3Dmol.js](http://3dmol.csb.pitt.edu/)
+- Network Viewer: [D3.js](https://d3js.org/)
+- Styling / Layout: [Bootstrap stack](https://getbootstrap.com/) 
+
 ## Funding
 
 This work was supported by the following sources:
